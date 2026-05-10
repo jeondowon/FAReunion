@@ -25,7 +25,7 @@ export default function OnbShell({
         }}
       >
         <img
-          src="/assets/fa-main-logo.svg"
+          src={`${import.meta.env.BASE_URL}assets/fa-main-logo.svg`}
           alt="Faith Academy"
           style={{ height: 36, width: "auto" }}
         />

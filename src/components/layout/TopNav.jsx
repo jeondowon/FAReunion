@@ -35,7 +35,7 @@ export default function TopNav({ active, go, user }) {
       <header className="topnav">
         <div className="topnav-inner">
           <img
-            src="/assets/fa-main-logo.svg"
+            src={`${import.meta.env.BASE_URL}assets/fa-main-logo.svg`}
             alt="Faith Academy"
             style={{ height: 32, width: 'auto', cursor: 'pointer' }}
             onClick={() => go('home')}
