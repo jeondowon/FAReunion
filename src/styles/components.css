@@ -1,0 +1,462 @@
+/* ---------- Buttons ---------- */
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  padding: 12px 24px;
+  border-radius: 8px;
+  font-weight: 500;
+  font-size: 15px;
+  border: 1px solid transparent;
+  transition: all 0.15s ease;
+  line-height: 1;
+  white-space: nowrap;
+}
+.btn:disabled {
+  opacity: 0.45;
+  cursor: not-allowed;
+}
+.btn-primary {
+  background: var(--navy);
+  color: white;
+}
+.btn-primary:hover:not(:disabled) {
+  background: var(--navy-dark);
+}
+.btn-gold {
+  background: var(--gold);
+  color: var(--navy);
+}
+.btn-gold:hover:not(:disabled) {
+  background: var(--gold-dark);
+}
+.btn-outline {
+  background: white;
+  color: var(--navy);
+  border-color: var(--border);
+}
+.btn-outline:hover:not(:disabled) {
+  border-color: var(--navy);
+  background: #fafbfd;
+}
+.btn-ghost {
+  background: transparent;
+  color: var(--text-gray);
+}
+.btn-ghost:hover:not(:disabled) {
+  background: var(--bg);
+  color: var(--text);
+}
+.btn-block {
+  width: 100%;
+}
+.btn-sm {
+  padding: 8px 16px;
+  font-size: 13px;
+  border-radius: 6px;
+}
+
+/* ---------- Form fields ---------- */
+.field {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+.field-label {
+  font-size: 14px;
+  font-weight: 500;
+  color: var(--text);
+}
+.field-label .opt {
+  color: var(--text-light);
+  font-weight: 400;
+  margin-left: 6px;
+}
+.field-hint {
+  font-size: 13px;
+  color: var(--text-gray);
+}
+.input,
+.select,
+.textarea {
+  background: white;
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  padding: 12px 16px;
+  font-size: 15px;
+  color: var(--text);
+  width: 100%;
+  outline: none;
+  transition: all 0.15s ease;
+}
+.input::placeholder,
+.textarea::placeholder {
+  color: var(--text-light);
+}
+.input:focus,
+.select:focus,
+.textarea:focus {
+  border-color: var(--navy);
+}
+.select {
+  appearance: none;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='8' viewBox='0 0 12 8'%3E%3Cpath fill='%236B7280' d='M6 8 0 0h12z'/%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-position: right 16px center;
+  padding-right: 40px;
+}
+.search-pill {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  background: white;
+  border-radius: 24px;
+  padding: 12px 20px;
+  border: 1px solid var(--navy);
+  transition: all 0.15s;
+}
+.search-pill input {
+  background: transparent;
+  border: none;
+  outline: none;
+  flex: 1;
+  font-size: 15px;
+}
+
+/* ---------- Cards ---------- */
+.card {
+  background: white;
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  padding: 24px;
+  box-shadow: var(--shadow-sm);
+}
+.card-hover {
+  transition: all 0.2s ease;
+}
+.card-hover:hover {
+  box-shadow: var(--shadow-md);
+  transform: translateY(-2px);
+  border-color: #d8dde6;
+}
+
+/* ---------- Avatar ---------- */
+.avatar {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(135deg, var(--navy-light), var(--navy));
+  color: white;
+  font-weight: 600;
+  border-radius: 50%;
+  flex-shrink: 0;
+  font-family: "Poppins", sans-serif;
+}
+.avatar-xs {
+  width: 28px;
+  height: 28px;
+  font-size: 11px;
+}
+.avatar-sm {
+  width: 36px;
+  height: 36px;
+  font-size: 13px;
+}
+.avatar-md {
+  width: 48px;
+  height: 48px;
+  font-size: 16px;
+}
+.avatar-lg {
+  width: 64px;
+  height: 64px;
+  font-size: 22px;
+}
+.avatar-xl {
+  width: 96px;
+  height: 96px;
+  font-size: 32px;
+}
+
+/* ---------- Tags / Pills ---------- */
+.tag {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  background: var(--bg);
+  color: var(--navy);
+  border: 1px solid var(--navy);
+  border-radius: 16px;
+  padding: 6px 12px;
+  font-size: 13px;
+  font-weight: 500;
+  line-height: 1;
+}
+.tag-removable button {
+  background: transparent;
+  border: 0;
+  color: var(--text-gray);
+  cursor: pointer;
+  padding: 0 0 0 4px;
+  font-size: 16px;
+  line-height: 1;
+}
+.tag-navy {
+  background: var(--navy);
+  color: white;
+}
+.tag-gold {
+  background: var(--gold);
+  color: var(--navy);
+}
+.tag-blue {
+  background: #dcebfe;
+  color: var(--navy);
+}
+.tag-success {
+  background: #d1fae5;
+  color: var(--success);
+}
+
+/* ---------- Stat cards ---------- */
+.stat-card {
+  background: linear-gradient(135deg, var(--navy) 0%, var(--navy-light) 100%);
+  color: white;
+  border-radius: 16px;
+  padding: 24px;
+  position: relative;
+  overflow: hidden;
+  box-shadow: var(--shadow-sm);
+}
+.stat-card .label {
+  font-size: 13px;
+  opacity: 0.8;
+  font-weight: 500;
+}
+.stat-card .value {
+  font-family: "Poppins";
+  font-size: 36px;
+  font-weight: 700;
+  margin-top: 6px;
+  line-height: 1;
+}
+.stat-card .delta {
+  font-size: 12px;
+  opacity: 0.9;
+  margin-top: 8px;
+  display: flex;
+  align-items: center;
+  gap: 4px;
+}
+
+/* ---------- Checkbox ---------- */
+.cb-row {
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+  cursor: pointer;
+  padding: 8px 0;
+}
+.cb {
+  width: 20px;
+  height: 20px;
+  border-radius: 5px;
+  border: 1.5px solid var(--border);
+  background: white;
+  flex-shrink: 0;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 1px;
+  transition: all 0.12s ease;
+}
+.cb-row:hover .cb {
+  border-color: var(--navy);
+}
+.cb.checked {
+  background: var(--navy);
+  border-color: var(--navy);
+}
+.cb.checked::after {
+  content: "";
+  display: block;
+  width: 6px;
+  height: 10px;
+  border: solid white;
+  border-width: 0 2px 2px 0;
+  transform: rotate(45deg) translate(-1px, -1px);
+}
+.cb-row .cb-text {
+  font-size: 14px;
+  line-height: 1.5;
+}
+.cb-row .cb-required {
+  color: var(--error);
+  margin-left: 4px;
+}
+
+/* ---------- Stepper ---------- */
+.stepper {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+.step-dot {
+  width: 28px;
+  height: 28px;
+  border-radius: 50%;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 12px;
+  font-weight: 600;
+  background: var(--bg);
+  color: var(--text-light);
+  border: 1px solid var(--border);
+}
+.step-dot.active {
+  background: var(--navy);
+  color: white;
+  border-color: var(--navy);
+}
+.step-dot.done {
+  background: var(--gold);
+  color: var(--navy);
+  border-color: var(--gold);
+}
+.step-bar {
+  flex: 1;
+  height: 2px;
+  background: var(--border);
+  border-radius: 1px;
+}
+.step-bar.done {
+  background: var(--navy);
+}
+
+/* ---------- Pill toggle ---------- */
+.pill-toggle {
+  display: inline-flex;
+  background: var(--bg);
+  padding: 4px;
+  border-radius: 24px;
+  gap: 4px;
+}
+.pill-toggle button {
+  padding: 8px 18px;
+  border-radius: 20px;
+  border: 0;
+  background: transparent;
+  font-size: 14px;
+  font-weight: 500;
+  color: var(--text-gray);
+  cursor: pointer;
+}
+.pill-toggle button.active {
+  background: white;
+  color: var(--navy);
+  box-shadow: 0 1px 4px rgba(15, 35, 71, 0.12);
+}
+
+/* ---------- Filter pills ---------- */
+.filter-pill {
+  background: white;
+  border: 1px solid var(--border);
+  color: var(--text-gray);
+  padding: 8px 16px;
+  border-radius: 24px;
+  font-size: 13px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.15s;
+}
+.filter-pill:hover {
+  border-color: var(--navy);
+  color: var(--navy);
+}
+.filter-pill.active {
+  background: var(--navy);
+  color: white;
+  border-color: var(--navy);
+}
+
+/* ---------- Badges ---------- */
+.badge {
+  display: inline-flex;
+  align-items: center;
+  padding: 4px 10px;
+  border-radius: 16px;
+  font-size: 12px;
+  font-weight: 600;
+  line-height: 1;
+}
+.badge-general {
+  background: #dcebfe;
+  color: var(--info);
+}
+.badge-career {
+  background: #fff4d1;
+  color: #8a6a00;
+}
+.badge-class {
+  background: var(--bg);
+  color: var(--text-gray);
+}
+
+/* ---------- Phone input group ---------- */
+.phone-group {
+  display: flex;
+}
+.phone-group .dial-select {
+  background: white;
+  border: 1px solid var(--border);
+  border-right: none;
+  border-radius: 8px 0 0 8px;
+  padding: 12px 8px 12px 12px;
+  font-size: 15px;
+  color: var(--text);
+  outline: none;
+  transition: border-color 0.15s ease;
+  cursor: pointer;
+  appearance: none;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='10' height='6' viewBox='0 0 10 6'%3E%3Cpath fill='%236B7280' d='M5 6 0 0h10z'/%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-position: right 8px center;
+  padding-right: 26px;
+  min-width: 96px;
+}
+.phone-group .phone-number {
+  flex: 1;
+  background: white;
+  border: 1px solid var(--border);
+  border-radius: 0 8px 8px 0;
+  padding: 12px 16px;
+  font-size: 15px;
+  color: var(--text);
+  outline: none;
+  transition: border-color 0.15s ease;
+}
+.phone-group .phone-number::placeholder {
+  color: var(--text-light);
+}
+.phone-group:focus-within .dial-select,
+.phone-group:focus-within .phone-number {
+  border-color: var(--navy);
+}
+
+/* ---------- Tag group ---------- */
+.tag-group {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+}
+
+/* ---------- Dot separator ---------- */
+.dot-separator {
+  width: 3px;
+  height: 3px;
+  background: var(--text-light);
+  border-radius: 50%;
+  flex-shrink: 0;
+}
